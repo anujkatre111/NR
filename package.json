@@ -1,0 +1,43 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "this is namaste react by anuj katre",
+  "keywords": [
+    "react",
+    "namaste",
+    "react",
+    "anuj",
+    "katre"
+  ],
+  "homepage": "https://github.com/anujkatre111/NR#readme",
+  "bugs": {
+    "url": "https://github.com/anujkatre111/NR/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anujkatre111/NR.git"
+  },
+  "license": "ISC",
+  "author": "Anuj Katre",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "parcel": "^2.15.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^6.23.1",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "os-browserify": "^0.3.0",
+    "postcss": "^8.5.6",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.17"
+  }
+}
