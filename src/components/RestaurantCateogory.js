@@ -33,13 +33,13 @@ export const RestaurantCateogory = ({cateogorydata}) => {
                 
                 return (
                     <div className="max-h-fit" key={sectionTitle}>
-                        <div className="flex justify-between p-4 border-b border-slate-300">
-                            <h1 className="text-[24px] tracking-tighter">{sectionTitle}</h1>
-                            <div className="relative overflow-visible">
-                                <button className="absolute text-[16px] font-medium tracking-tighter" onClick={() => {
+                        <div className="flex justify-between p-4 border-b border-slate-300" onClick={() => {
                                     // toggleSection(sectionTitle); 
                                     setShowIndex(isOpen ? "" : sectionTitle); // Toggle the showIndex state
                                 }}>
+                            <h1 className="text-[24px] tracking-tighter">{sectionTitle}</h1>
+                            <div className="relative overflow-visible">
+                                <button className="absolute text-[16px] font-medium tracking-tighter"  >
                                     {isOpen ?  "+" : "-"}
                                     </button>
                             </div>

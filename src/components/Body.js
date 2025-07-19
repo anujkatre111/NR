@@ -39,7 +39,7 @@ export const Body = () => {
             <div className="filter py-[24px] flex gap-[200px] justify-center">
 
                 <div className="search-btn">
-                    <input type="text" className="p-2 border border-slate-500 bg-slate-200 rounded-[6px]" placeholder="Search for restaurants" value={searchText} onChange={(e)=>{
+                    <input type="text" data-testid="search-input" className="p-2 border border-slate-500 bg-slate-200 rounded-[6px]" placeholder="Search for restaurants" value={searchText} onChange={(e)=>{
                         setSearchText(e.target.value);
                     }}/>
                     <button className="search-btn p-2 bg-slate-200 rounded hover:bg-[#f0f0f0]" onClick={()=>{
@@ -56,7 +56,7 @@ export const Body = () => {
                      onChange={(e)=> setUserName(e.target.value)} />
                 </div>
 
-                <button className="filter-btn p-2 px-8 bg-slate-200 border border-slate-400 rounded hover:bg-[#f0f0f0] tracking-tighter" onClick={() => {
+                <button className="filter-btn p-2 px-8 bg-slate-200 border border-slate-400 rounded hover:bg-[#f0f0f0] tracking-tighter"  data-testid="filter-btn" onClick={() => {
                 const filteredList = restList.filter(
                     (res) => res.info.avgRating > 4.3
                 );
@@ -69,6 +69,7 @@ export const Body = () => {
               {newList.map((restaurant) => (
                 <Link key={restaurant.info.id} to={"/restaurant/" + restaurant.info.id}>
                     {/* if the restaurant card is promoted then show promoted label on top of it */}
+                    {console.log(restaurant.info)}
                   {restaurant.info.isOpen ? <RestaurantCardPromoted resData={restaurant}/> : <RestaurantCard resData={restaurant}/>}
                 </Link>
               ))}

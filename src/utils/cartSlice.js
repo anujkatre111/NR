@@ -16,7 +16,8 @@ const cartSlice = createSlice({
             state.items.pop();
         },
         clearCart: (state, action) => {
-            state.items = []; // []
+            state.items.length = 0;
+            // state.items = []; // [] this code has its drawback
             // he did not used the state.items = [] because of some reason which he will tell later
         }
     }

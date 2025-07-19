@@ -16,14 +16,14 @@ export const Header = () =>{
     const cartItems = useSelector((store)=> store.cart.items);
     
     return(
-        <div className="header flex justify-between items-center p-12 bg-white z-10 transition-transform overflow-visible duration-300 border-b border-slate-700 sticky top-0 ">
+        <div className="header flex justify-between items-center p-12 bg-white z-10 transition-transform overflow-visible duration-300 border-b border-l border-r border-slate-300 sticky top-0 rounded-[42px] shadow-md">
             <div className="logo w-[64px] overflow-visible transition-transform duration-300">
                 <img src="https://i.pinimg.com/736x/14/fd/b1/14fdb1127c5b833bf8018cf60e138579.jpg" className="w-full rounded-[48px] transform-gpu hover:scale-110 transition-transform duration-300"/>
             </div>
             <div className="nav-items tracking-tighter">
                 <ul className="flex items-center gap-12">
                     <li className="hover:text-red-600">
-                        <h1>{useOnlineStatus() ? "OK" : "NOT OK"}</h1>
+                        <h1>{useOnlineStatus() ? "Online: ✅" : "Offline: ❌"}</h1>
                     </li>
                     <li className="hover:text-red-600">
                     <Link to="/">Home</Link>

@@ -3,6 +3,7 @@ import { IMAGE_URL } from "../utils/constants";
 import { clearCart } from "../utils/cartSlice";
 
 
+
 const Cart = () => {
 
     const cartItems = useSelector((store) => (store.cart.items))
@@ -13,7 +14,12 @@ const Cart = () => {
         dispatch(clearCart());
     };
 
-    if(cartItems.length === 0) return <div className="mx-auto text-[24px] tracking-tighter"><h1>Your Card is Empty as Hell</h1></div>
+    if(cartItems.length === 0){ return (
+    <div className="flex mx-auto h-[50vh] justify-center items-center text-[24px] tracking-tighter">
+        <h1>Your Card is Empty as Hell</h1>
+    </div>
+    )}
+
     return (
         <div className="flex flex-col gap-[24px] w-[800px] mx-auto">
             <div className="clear-cart flex p-4 justify-between">

@@ -22,7 +22,7 @@ const RestaurantMenu = () => {
     );
     
     
-    const {name,cuisines, costForTwoMessage} = resInfo ? resInfo?.cards[2]?.card?.card?.info : {};
+    // const {name,cuisines, costForTwoMessage} = resInfo ? resInfo?.cards[2]?.card?.card?.info : {};
     
 
     if(!Online) return <h1>Please Check Your Internet</h1>;
